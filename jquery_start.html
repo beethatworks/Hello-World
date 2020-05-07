@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery-3.5.0.js"></script>
+    <script>
+
+    // Your code goes here.
+
+    $( document ).ready(function() {
+
+// using jQuery instead of alias $
+      jQuery( "a" ).click(function( event ) {
+
+          alert( "As you can see, the link no longer took you to jquery.com" );
+
+          event.preventDefault();
+
+      });
+
+  });
+
+// using jQuery to slowly hide link
+  $( "a" ).click(function( event ) {
+
+    event.preventDefault();
+
+    $( this ).hide( "slow" );
+
+});
+
+  /*
+  $(document).ready(function() {};
+
+  $( "a" ).click(function( event ) {
+
+      event.preventDefault();
+
+      $( this ).hide( "slow" );
+
+  });
+
+
+  */
+
+    </script>
+</body>
+</html>
